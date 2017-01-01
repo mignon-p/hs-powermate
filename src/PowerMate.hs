@@ -45,7 +45,7 @@ nextEvent k@(Knob h) = do
 
 setLed :: Knob -> Word8 -> IO ()
 setLed (Knob h) v = do
-  writeEvent h $ InputEvent 0 0 btnMisc mscPulseLed $ fromIntegral v
+  writeEvent h $ InputEvent 0 0 evMsc mscPulseLed $ fromIntegral v
 
 closeController :: Knob -> IO ()
 closeController (Knob h) = hClose h

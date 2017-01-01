@@ -9,7 +9,7 @@ module PowerMate.Foreign
   , InputEvent (..)
   , evKey
   , evRel
-  , btnMisc
+  , evMsc
   , mscPulseLed
   ) where
 
@@ -71,8 +71,8 @@ evKey = #const EV_KEY
 evRel :: EventType
 evRel = #const EV_REL
 
-btnMisc :: EventType
-btnMisc = #const BTN_MISC
+evMsc :: EventType
+evMsc = #const EV_MSC
 
 mscPulseLed :: EventCode
 mscPulseLed = #const MSC_PULSELED
