@@ -6,7 +6,7 @@ module PowerMate.Foreign
   , EventType
   , EventCode
   , EventValue
-  , InputEvent
+  , InputEvent (..)
   ) where
 
 import Control.Applicative

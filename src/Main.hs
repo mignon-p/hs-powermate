@@ -1,3 +1,3 @@
-import PowerMate.Foreign
+import PowerMate
 
 main = putStrLn "hello"
