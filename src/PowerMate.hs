@@ -42,8 +42,3 @@ readEvent = undefined
 
 writeEvent :: Handle -> InputEvent -> IO ()
 writeEvent = undefined
-
-evKey = undefined
-evRel = undefined
-btnMisc = undefined
-mscPulseLed = undefined

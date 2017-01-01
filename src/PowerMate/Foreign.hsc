@@ -7,6 +7,10 @@ module PowerMate.Foreign
   , EventCode
   , EventValue
   , InputEvent (..)
+  , evKey
+  , evRel
+  , btnMisc
+  , mscPulseLed
   ) where
 
 import Control.Applicative
@@ -60,3 +64,15 @@ instance Storable InputEvent where
     pokeType         p (eventType         ie)
     pokeCode         p (eventCode         ie)
     pokeValue        p (eventValue        ie)
+
+evKey :: EventType
+evKey = #const EV_KEY
+
+evRel :: EventType
+evRel = #const EV_REL
+
+btnMisc :: EventType
+btnMisc = #const BTN_MISC
+
+mscPulseLed :: EventCode
+mscPulseLed = #const MSC_PULSELED
