@@ -40,7 +40,7 @@ data Event = ButtonPressed | ButtonReleased | Clockwise | Counterclockwise
 powermateDevice :: FilePath
 powermateDevice = "/dev/input/powermate"
 
--- | Open the PowerMate USB controller on @/dev/input/powermate@.
+-- | Open the PowerMate USB controller on @\/dev\/input\/powermate@.
 --   (If that device file does not exist, see the @README.md@ about
 --   creating a udev rule.)
 openController :: IO Knob
