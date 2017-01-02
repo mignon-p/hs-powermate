@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ppelleti/hs-powermate.svg?branch=master)](https://travis-ci.org/ppelleti/hs-powermate)
+
 This library is for interfacing the [Griffin PowerMate USB][1] with
 Haskell.  This library only works on Linux, and is primarily intended
 for headless/embedded Linux systems such as the Raspberry Pi.  (Other
