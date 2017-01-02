@@ -16,7 +16,15 @@ version:             0.1.0.0
 synopsis:            Read events from a Griffin PowerMate USB
 
 -- A longer description of the package.
--- description:
+description:
+        This library is for interfacing the Griffin PowerMate USB (a
+        big silver knob you can turn and click) with Haskell.  This
+        library only works on Linux, and is primarily intended for
+        headless/embedded Linux systems such as the Raspberry Pi.
+        (Other solutions already exist for interfacing the PowerMate
+        with desktop Linux.)  Besides reading events from the
+        PowerMate, you can also control the brightness of the built-in
+        LED.
 
 -- The license under which the package is released.
 license:             BSD3
@@ -32,15 +40,15 @@ author:              Patrick Pelletier
 maintainer:          code@funwithsoftware.org
 
 -- A copyright notice.
--- copyright:
+copyright:           © Patrick Pelletier, 2017
 
--- category:
+category:            Hardware
 
 build-type:          Simple
 
 -- Extra files to be distributed with the package, such as examples or a
 -- README.
--- extra-source-files:
+extra-source-files:  README.md
 
 -- Constraint on the version of Cabal needed to build this package.
 cabal-version:       >=1.10
