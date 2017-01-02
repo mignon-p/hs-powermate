@@ -13,7 +13,7 @@ Before plugging in the PowerMate, create the file
 This will cause the PowerMate to show up as `/dev/input/powermate`
 when it is plugged in, which is where the library expects to find it.
 
-Besides the library, this packages includes two example programs,
+Besides the library, this package includes two example programs,
 `powermate-print` and `powermate-pulse`.  `powermate-print` simply
 prints out the events it receives from the PowerMate.
 `powermate-pulse` does the same thing, but also pulses the blue LED.
