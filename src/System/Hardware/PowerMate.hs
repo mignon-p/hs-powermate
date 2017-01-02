@@ -16,6 +16,7 @@ module System.Hardware.PowerMate
   ( Knob
   , Event (..)
   , openController
+  , openController'
   , nextEvent
   , setLed
   , closeController
@@ -36,13 +37,21 @@ newtype Knob = Knob Handle
 data Event = ButtonPressed | ButtonReleased | Clockwise | Counterclockwise
            deriving (Eq, Ord, Show, Read, Bounded, Enum)
 
-powermateDevice :: String
+powermateDevice :: FilePath
 powermateDevice = "/dev/input/powermate"
 
--- | Open the PowerMate USB controller.
+-- | Open the PowerMate USB controller on @/dev/input/powermate@.
+--   (If that device file does not exist, see the @README.md@ about
+--   creating a udev rule.)
 openController :: IO Knob
-openController = do
-  h <- openFile powermateDevice ReadWriteMode
+openController = openController' powermateDevice
+
+-- | Open a PowerMate USB controller with the specified device file.
+--   You only need this if you have multiple PowerMates, or are doing
+--   something else weird.
+openController' :: FilePath -> IO Knob
+openController' dev = do
+  h <- openFile dev ReadWriteMode
   hSetBuffering h NoBuffering
   return $ Knob h
 
@@ -76,7 +85,7 @@ readEvent h = alloca $ \p -> do
   ret <- hGetBuf h p sz
   if ret == sz
     then peek p
-    else fail ("end-of-file on " ++ powermateDevice)
+    else fail ("end-of-file on " ++ show h)
 
 writeEvent :: Handle -> InputEvent -> IO ()
 writeEvent h ie = with ie $ \p -> hPutBuf h p (sizeOf ie)
