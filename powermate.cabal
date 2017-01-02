@@ -55,9 +55,9 @@ cabal-version:       >=1.10
 
 
 library
-  exposed-modules:     PowerMate
+  exposed-modules:     System.Hardware.PowerMate
 
-  other-modules:       PowerMate.Foreign
+  other-modules:       System.Hardware.PowerMate.Foreign
 
   -- LANGUAGE extensions used by modules in this package.
   -- other-extensions:

@@ -12,7 +12,7 @@ This module is for interfacing the Griffin PowerMate USB with Haskell.
 
 {-# LANGUAGE MultiWayIf #-}
 
-module PowerMate
+module System.Hardware.PowerMate
   ( Knob
   , Event (..)
   , openController
@@ -27,7 +27,7 @@ import Foreign.Marshal.Utils
 import Foreign.Storable
 import System.IO
 
-import PowerMate.Foreign
+import System.Hardware.PowerMate.Foreign
 
 -- | Represents a PowerMate USB controller.
 newtype Knob = Knob Handle

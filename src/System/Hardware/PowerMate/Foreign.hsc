@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP, ForeignFunctionInterface #-}
 
-module PowerMate.Foreign
+module System.Hardware.PowerMate.Foreign
   ( EventSeconds
   , EventMicroseconds
   , EventType

@@ -1,7 +1,7 @@
 import Control.Concurrent
 import Control.Monad
 
-import PowerMate
+import System.Hardware.PowerMate
 
 pulse :: Knob -> Double -> IO ()
 pulse k x = do

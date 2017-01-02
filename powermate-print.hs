@@ -1,6 +1,6 @@
 import Control.Monad
 
-import PowerMate
+import System.Hardware.PowerMate
 
 main = do
   k <- openController
