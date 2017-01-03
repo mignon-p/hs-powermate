@@ -20,7 +20,12 @@ Besides the library, this package includes two example programs,
 prints out the events it receives from the PowerMate.
 `powermate-pulse` does the same thing, but also pulses the blue LED.
 
+After writing this library, I discovered that
+[another Haskell library for PowerMate][5] already exists.  I wasn't
+able to get it to compile, though.
+
 [1]: https://griffintechnology.com/us/powermate
 [2]: https://github.com/stefansundin/powermate-linux
 [3]: http://gizmod.sourceforge.net/
 [4]: https://www.bedroomlan.org/projects/evrouter2
+[5]: https://hackage.haskell.org/package/powermate
